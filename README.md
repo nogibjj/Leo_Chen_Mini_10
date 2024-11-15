@@ -1,37 +1,44 @@
-[![CI](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/python-ruff-template/actions/workflows/cicd.yml)
-## Template for Python projects with RUFF linter
+# Leo Chen Mini 10
 
-![1 15_rust_built_python_tools](https://github.com/nogibjj/python-ruff-template/assets/58792/db5f7bda-a977-4c67-acbe-a70fe034fbdf)
+[![CI](https://github.com/nogibjj/Leo_Chen_Mini_10/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Leo_Chen_Mini_10/actions/workflows/cicd.yml)
 
+## PySpark Data Processing
+This project demonstrates the use of PySpark for processing and analyzing FIFA data. The main objectives include performing Spark SQL queries and data transformations to gain insights about global football viewership patterns, confederation distributions, and economic impacts.
 
+### Data
+[FiveThirtyEight FIFA Dataset](https://github.com/fivethirtyeight/data/blob/master/fifa)
 
-1. First thing to do on launch is to open a new shell and verify virtualenv is sourced.
+This project uses FIFA countries audience dataset from FiveThirtyEight, which includes:
+- Country names
+- Confederation affiliations  
+- Population share
+- TV audience share
+- GDP weighted share
 
-Things included are:
+### Key Features
+1. Data extraction from source
+2. Basic statistical analysis  
+3. Confederation-based grouping and analysis
+4. Regional categorization transformation
+5. PySpark SQL queries
 
-* `Makefile`
+### Getting Started
+1. Open codespaces
+2. Wait for environment to be built
+3. Run: `python main.py`
+4. Check results in [PySpark Output Data/Summary](pyspark_output.md)
 
-* `Pytest`
+### Data Processing Flow
+1. **Extract**: Download FIFA dataset using `extract()`
+2. **Initialize**: Start Spark session via `start_spark()`
+3. **Load**: Load FIFA data into DataFrame using `load_data()`
+4. **Analyze**: Generate descriptive statistics via `describe()`
+5. **Query**: Execute Spark SQL queries using `query()`
+6. **Transform**: Perform regional categorization via `example_transform()`
+7. **Cleanup**: End Spark session using `end_spark()`
 
-* `pandas`
-
-* `Ruff`:  
-
-Run `make lint` which runs `ruff check`.  You can find out more info on [Ruff here](https://github.com/astral-sh/ruff).
-
-* `Dockerfile`
-
-* `GitHub copilot`
-
-* `jupyter` and `ipython` 
-
-* A base set of libraries for devops and web
-
-* `githubactions`
-
-## References
-
-![1 1-function-essence-of-programming](https://github.com/nogibjj/python-ruff-template/assets/58792/f7f33cd3-cff5-4014-98ea-09b6a29c7557)
-
-
-
+### Output
+After running the analysis, you'll get:
+1. Basic statistics like mean and stddev
+2. Confederation-wise country counts and average GDP shares
+3. Regional categorization (Eurasia, Americas, Others)
